@@ -41,6 +41,9 @@ Partial Class Form1
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnVerDatos = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -70,7 +73,6 @@ Partial Class Form1
         '
         'txtNombre
         '
-        Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(103, 82)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(227, 22)
@@ -87,7 +89,6 @@ Partial Class Form1
         '
         'txtApellido
         '
-        Me.txtApellido.Enabled = False
         Me.txtApellido.Location = New System.Drawing.Point(103, 126)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(227, 22)
@@ -105,7 +106,6 @@ Partial Class Form1
         'rbtnMasculino
         '
         Me.rbtnMasculino.AutoSize = True
-        Me.rbtnMasculino.Enabled = False
         Me.rbtnMasculino.Location = New System.Drawing.Point(44, 220)
         Me.rbtnMasculino.Name = "rbtnMasculino"
         Me.rbtnMasculino.Size = New System.Drawing.Size(92, 21)
@@ -117,7 +117,6 @@ Partial Class Form1
         'rbtnFemenino
         '
         Me.rbtnFemenino.AutoSize = True
-        Me.rbtnFemenino.Enabled = False
         Me.rbtnFemenino.Location = New System.Drawing.Point(143, 220)
         Me.rbtnFemenino.Name = "rbtnFemenino"
         Me.rbtnFemenino.Size = New System.Drawing.Size(91, 21)
@@ -129,7 +128,6 @@ Partial Class Form1
         'rbtnNoEspecifica
         '
         Me.rbtnNoEspecifica.AutoSize = True
-        Me.rbtnNoEspecifica.Enabled = False
         Me.rbtnNoEspecifica.Location = New System.Drawing.Point(241, 220)
         Me.rbtnNoEspecifica.Name = "rbtnNoEspecifica"
         Me.rbtnNoEspecifica.Size = New System.Drawing.Size(114, 21)
@@ -149,7 +147,6 @@ Partial Class Form1
         '
         'cboComuna
         '
-        Me.cboComuna.Enabled = False
         Me.cboComuna.FormattingEnabled = True
         Me.cboComuna.Location = New System.Drawing.Point(100, 278)
         Me.cboComuna.Name = "cboComuna"
@@ -168,7 +165,6 @@ Partial Class Form1
         '
         'txtCiudad
         '
-        Me.txtCiudad.Enabled = False
         Me.txtCiudad.Location = New System.Drawing.Point(100, 320)
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(227, 22)
@@ -185,7 +181,6 @@ Partial Class Form1
         '
         'txtObservacion
         '
-        Me.txtObservacion.Enabled = False
         Me.txtObservacion.Location = New System.Drawing.Point(128, 368)
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(199, 22)
@@ -203,11 +198,11 @@ Partial Class Form1
         'btnGuardar
         '
         Me.btnGuardar.Enabled = False
-        Me.btnGuardar.Location = New System.Drawing.Point(103, 427)
+        Me.btnGuardar.Location = New System.Drawing.Point(37, 410)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(152, 28)
+        Me.btnGuardar.Size = New System.Drawing.Size(99, 28)
         Me.btnGuardar.TabIndex = 17
-        Me.btnGuardar.Text = "Guardar MySql"
+        Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'Label8
@@ -219,11 +214,41 @@ Partial Class Form1
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Ejemplo: 123456789"
         '
+        'btnActualizar
+        '
+        Me.btnActualizar.Location = New System.Drawing.Point(191, 413)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(90, 25)
+        Me.btnActualizar.TabIndex = 19
+        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(37, 458)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(99, 27)
+        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnVerDatos
+        '
+        Me.btnVerDatos.Location = New System.Drawing.Point(181, 458)
+        Me.btnVerDatos.Name = "btnVerDatos"
+        Me.btnVerDatos.Size = New System.Drawing.Size(136, 23)
+        Me.btnVerDatos.TabIndex = 21
+        Me.btnVerDatos.Text = "Ver Datos BD"
+        Me.btnVerDatos.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(390, 511)
+        Me.Controls.Add(Me.btnVerDatos)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnBuscar)
@@ -269,4 +294,7 @@ Partial Class Form1
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents btnActualizar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnVerDatos As Button
 End Class
